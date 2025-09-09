@@ -1,0 +1,62 @@
+/* 🌐 Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* 🎨 Part 1: CSS Transitions & Animations */
+
+/* Button hover effect */
+.animated-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* Box with continuous animation */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background-color: #ff6b6b;
+  animation: pulse 2s infinite;
+  border-radius: 12px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🎬 Part 3: JS-Triggered Animation */
+.trigger-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background-color: #48cae4;
+  border-radius: 12px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.trigger-box.animate {
+  transform: translateY(-20px) scale(1.2);
+  opacity: 0.6;
+}
